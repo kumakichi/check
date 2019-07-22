@@ -3,11 +3,11 @@ Instructions
 
 Install the package with:
 
-    go get github.com/pingcap/check
+    go get github.com/kumakichi/check
     
 Import it with:
 
-    import "github.com/pingcap/check"
+    import "github.com/kumakichi/check"
 
 and use _check_ as the package name inside the code.
 

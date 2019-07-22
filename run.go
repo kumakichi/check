@@ -16,8 +16,7 @@ import (
 var (
 	allParallelSuites []interface{}
 	allSerialSuites   []interface{}
-	)
-
+)
 
 // Suite registers the given value as a test suite to be run. Any methods
 // starting with the Test prefix in the given value will be considered as
@@ -27,12 +26,20 @@ func Suite(suite interface{}) interface{} {
 	return suite
 }
 
+func EmptySuite() {
+	allParallelSuites = make([]interface{}, 0)
+}
+
 // SerialSuites registers the given value as a test suite to be run serially. Any methods
 // starting with the Test prefix in the given value will be considered as
 // a test method.
 func SerialSuites(suite interface{}) interface{} {
 	allSerialSuites = append(allSerialSuites, suite)
 	return suite
+}
+
+func EmptySerialSuites() {
+	allSerialSuites = make([]interface{}, 0)
 }
 
 // -----------------------------------------------------------------------

@@ -16,7 +16,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pingcap/check"
+	"github.com/kumakichi/check"
 )
 
 type BootstrapS struct{}
